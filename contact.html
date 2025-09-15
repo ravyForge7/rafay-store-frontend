@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Rafay Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Rafay Store</div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-title">Contact Us</div>
+      <div class="card" style="max-width:720px;margin:0 auto;">
+        <form class="form-grid" onsubmit="alert('Demo: message captured on front-end only'); return false;">
+          <input class="input" type="text" placeholder="Full name" required>
+          <input class="input" type="email" placeholder="Email" required>
+          <textarea class="input" placeholder="Message" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container">Designed by Muhammad Rafay • © 2025</div></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

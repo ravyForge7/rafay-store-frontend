@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cart — Rafay Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Rafay Store</div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html" class="active">Cart <span id="cart-count">0</span></a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="section container">
+    <div class="section-title">Your Cart</div>
+
+    <div id="cart-list" class="cart-list"></div>
+
+    <div style="max-width:720px;margin:18px auto;text-align:right;">
+      <div style="font-weight:800;color:#06393a">Total: <span id="cart-total">PKR 0</span></div>
+      <button class="btn" style="margin-top:12px" onclick="alert('Demo: Checkout requires backend / payment gateway')">Proceed to Checkout</button>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container">Designed by Muhammad Rafay • © 2025</div></footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

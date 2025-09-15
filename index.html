@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rafay Store — Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- header / navbar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Rafay Store</div>
+      <ul class="nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html">Cart <span id="cart-count" style="background:#ff7b54;color:white;padding:3px 7px;border-radius:10px;font-size:0.8rem;margin-left:6px">0</span></a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Modern storefronts. Clean UI. Fast delivery.</h1>
+      <p>Rafay Store — a multipurpose demo shop designed to attract clients. Browse products and try the cart.</p>
+      <a class="btn" href="shop.html">Start Shopping</a>
+    </div>
+  </section>
+
+  <!-- featured products -->
+  <section class="section">
+    <div class="container">
+      <div class="title section-title">Featured Products</div>
+      <div class="products-grid">
+        <!-- product 1 -->
+        <article class="card">
+          <img src="https://picsum.photos/seed/p1/600/400" alt="Product 1">
+          <div class="card-body">
+            <h3>Urban Headphones</h3>
+            <p>Comfortable, deep bass, wireless connection.</p>
+            <div class="price-row">
+              <div class="price">PKR 7,999</div>
+              <button class="add-btn" onclick='addToCart({id:1,title:"Urban Headphones",price:7999,image:"https://picsum.photos/seed/p1/600/400"})'>Add</button>
+              <a href="product.html?id=1" style="margin-left:8px;color:#376b6a;font-weight:700">View</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- product 2 -->
+        <article class="card">
+          <img src="https://picsum.photos/seed/p2/600/400" alt="Product 2">
+          <div class="card-body">
+            <h3>Smart Watch</h3>
+            <p>Activity tracking, notifications, long battery life.</p>
+            <div class="price-row">
+              <div class="price">PKR 12,500</div>
+              <button class="add-btn" onclick='addToCart({id:2,title:"Smart Watch",price:12500,image:"https://picsum.photos/seed/p2/600/400"})'>Add</button>
+              <a href="product.html?id=2" style="margin-left:8px;color:#376b6a;font-weight:700">View</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- product 3 -->
+        <article class="card">
+          <img src="https://picsum.photos/seed/p3/600/400" alt="Product 3">
+          <div class="card-body">
+            <h3>Coffee Maker</h3>
+            <p>Fresh brew, small footprint, easy clean.</p>
+            <div class="price-row">
+              <div class="price">PKR 6,200</div>
+              <button class="add-btn" onclick='addToCart({id:3,title:"Coffee Maker",price:6200,image:"https://picsum.photos/seed/p3/600/400"})'>Add</button>
+              <a href="product.html?id=3" style="margin-left:8px;color:#376b6a;font-weight:700">View</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>Designed by Muhammad Rafay • © 2025</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

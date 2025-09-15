@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Product — Rafay Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Rafay Store</div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- product detail: we read ?id= from URL and show details for few demo products -->
+  <main class="section container">
+    <div id="product-detail" class="card product-hero" style="padding:20px;">
+      <!-- dynamic content filled by small inline script -->
+      <div>
+        <img id="p-image" src="https://picsum.photos/seed/p1/900/600" alt="product">
+      </div>
+      <div style="padding:6px 12px;">
+        <h2 id="p-title">Product Title</h2>
+        <p id="p-desc">Product description goes here.</p>
+        <div style="margin:12px 0; font-weight:800; color:#06393a" id="p-price">PKR 0</div>
+        <button class="add-btn" id="p-add">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container">Designed by Muhammad Rafay • © 2025</div></footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // small product lookup (demo data)
+    const products = {
+      1: {id:1,title:"Urban Headphones",price:7999, image:"https://picsum.photos/seed/p1/900/600", desc:"Comfortable wireless headphones with deep bass."},
+      2: {id:2,title:"Smart Watch",price:12500, image:"https://picsum.photos/seed/p2/900/600", desc:"Track activity and notifications with style."},
+      3: {id:3,title:"Coffee Maker",price:6200, image:"https://picsum.photos/seed/p3/900/600", desc:"Brew freshly every morning with ease."},
+      4: {id:4,title:"Wireless Speaker",price:3200, image:"https://picsum.photos/seed/p4/900/600", desc:"Portable speaker with clear sound."},
+      5: {id:5,title:"Elegant Lamp",price:2100, image:"https://picsum.photos/seed/p5/900/600", desc:"Warm light for calm evenings."},
+      6: {id:6,title:"Minimal Backpack",price:4800, image:"https://picsum.photos/seed/p6/900/600", desc:"Durable, fits daily essentials and laptop."}
+    };
+
+    // read id from query string then render
+    function qs(name) {
+      const url = new URL(location.href);
+      return url.searchParams.get(name);
+    }
+    const id = qs('id') || '1';
+    const p = products[id] || products[1];
+    document.getElementById('p-image').src = p.image;
+    document.getElementById('p-title').textContent = p.title;
+    document.getElementById('p-desc').textContent = p.desc;
+    document.getElementById('p-price').textContent = 'PKR ' + p.price;
+    document.getElementById('p-add').onclick = () => addToCart(p);
+  </script>
+</body>
+</html>

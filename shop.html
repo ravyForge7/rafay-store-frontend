@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shop — Rafay Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Rafay Store</div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="section container">
+    <div class="section-title">Shop All</div>
+    <div class="products-grid">
+      <!-- repeat cards (these can be swapped easily) -->
+      <article class="card">
+        <img src="https://picsum.photos/seed/p4/600/400" alt="">
+        <div class="card-body">
+          <h3>Wireless Speaker</h3>
+          <p>Portable, loud, water-resistant.</p>
+          <div class="price-row">
+            <div class="price">PKR 3,200</div>
+            <button class="add-btn" onclick='addToCart({id:4,title:"Wireless Speaker",price:3200,image:"https://picsum.photos/seed/p4/600/400"})'>Add</button>
+            <a href="product.html?id=4" style="margin-left:8px;color:#376b6a;font-weight:700">View</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://picsum.photos/seed/p5/600/400" alt="">
+        <div class="card-body">
+          <h3>Elegant Lamp</h3>
+          <p>Warm light, modern design for home.</p>
+          <div class="price-row">
+            <div class="price">PKR 2,100</div>
+            <button class="add-btn" onclick='addToCart({id:5,title:"Elegant Lamp",price:2100,image:"https://picsum.photos/seed/p5/600/400"})'>Add</button>
+            <a href="product.html?id=5" style="margin-left:8px;color:#376b6a;font-weight:700">View</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://picsum.photos/seed/p6/600/400" alt="">
+        <div class="card-body">
+          <h3>Minimal Backpack</h3>
+          <p>Durable, sleek, fits a 15” laptop.</p>
+          <div class="price-row">
+            <div class="price">PKR 4,800</div>
+            <button class="add-btn" onclick='addToCart({id:6,title:"Minimal Backpack",price:4800,image:"https://picsum.photos/seed/p6/600/400"})'>Add</button>
+            <a href="product.html?id=6" style="margin-left:8px;color:#376b6a;font-weight:700">View</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container">Designed by Muhammad Rafay • © 2025</div></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
